@@ -3,15 +3,24 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  arr.any? ? arr.reduce(:+) : 0
+  # Below is my first way of solving before finding a more ruby-way
+  # sum = 0
+  # arr.each { |x| sum += x }
+  # return sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  arr.max(2).reduce(:+)
+  # Below is my first way of solving before finding a more ruby-way
+  # sum = arr.max 
+  # arr.delete_at(arr.index(sum))
+  # arr.empty? ? sum : sum += arr.max #if arr is one element.
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.any? ? arr.combination(2).any? { |x,y| x+y == n} : false
 end
 
 # Part 2
