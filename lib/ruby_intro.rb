@@ -33,12 +33,14 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  return false unless s =~ /^[01]+$/
-  return s.to_i(2)%4 == 0
+  s =~ /^[01]+$/ ? s.to_i(2)%4 == 0 : false
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
+  end
 end
