@@ -3,7 +3,7 @@
 # Part 1
 
 def sum arr
-  arr.empty? ? arr.reduce(:+) : 0
+  arr.empty? ? 0 : arr.reduce(:+) 
   # Below is my first way of solving before finding a more ruby-way
   # sum = 0
   # arr.each { |x| sum += x }
@@ -11,7 +11,7 @@ def sum arr
 end
 
 def max_2_sum arr
-  arr.empty? ? arr.max(2).reduce(:+) : 0
+  arr.empty? ? 0 : arr.max(2).reduce(:+)
   # Below is my first way of solving before finding a more ruby-way
   # sum = arr.max 
   # arr.delete_at(arr.index(sum))
@@ -19,7 +19,7 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  arr.empty? ? arr.combination(2).any? { |x,y| x+y == n} : false
+  arr.empty? ? false : arr.combination(2).any? { |x,y| x+y == n}
 end
 
 # Part 2
